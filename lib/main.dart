@@ -1,9 +1,10 @@
-// main.dart
 import 'package:flutter/material.dart';
-import 'package:app_espinar/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:app_espinar/splash_screen.dart'; // o la pantalla que uses
 
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();  // Inicializa Firebase aquí
   runApp(const MyApp());
 }
 
